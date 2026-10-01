@@ -1,0 +1,45 @@
+/* 骨組み用の最小限スタイル（配色・デザインは後で調整） */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: sans-serif; line-height: 1.7; color: #333; }
+a { color: inherit; }
+ul { padding: 0; list-style: none; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+.site-header { border-bottom: 1px solid #ddd; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 12px; padding-bottom: 12px; }
+.logo { font-weight: bold; font-size: 1.25rem; text-decoration: none; }
+.global-nav ul, .footer-nav { display: flex; flex-wrap: wrap; gap: 20px; margin: 0; }
+.global-nav a[aria-current="page"] { font-weight: bold; text-decoration: underline; }
+
+.hero { padding: 100px 0; background: #eee; text-align: center; }
+.page-title { padding: 48px 0; background: #eee; }
+.page-title h1, .hero h1 { margin: 0 0 16px; }
+.page-title h1 { margin: 0; }
+.section { padding: 56px 0; }
+.section.alt { background: #f7f7f7; }
+.button { display: inline-block; padding: 10px 24px; border: 1px solid #333; text-decoration: none; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 24px 0; }
+.card { padding: 20px; border: 1px solid #ddd; background: #fff; }
+.card h2, .card h3 { margin-top: 0; font-size: 1.1rem; }
+
+.news li { padding: 8px 0; border-bottom: 1px solid #ddd; }
+.news time { margin-right: 1em; color: #777; }
+
+.history { display: grid; grid-template-columns: 8em 1fr; gap: 8px 16px; }
+.history dt { font-weight: bold; }
+.history dd { margin: 0; }
+
+.company-table { width: 100%; border-collapse: collapse; }
+.company-table th, .company-table td { padding: 14px; border: 1px solid #ddd; text-align: left; vertical-align: top; }
+.company-table th { width: 10em; background: #f7f7f7; }
+.map-placeholder { padding: 80px 20px; border: 1px dashed #999; text-align: center; color: #777; }
+
+.site-footer { padding: 32px 0; border-top: 1px solid #ddd; font-size: .9rem; }
+.footer-name { font-weight: bold; margin: 0 0 8px; }
+.copyright { margin: 16px 0 0; color: #777; }
+
+@media (max-width: 600px) {
+  .history { grid-template-columns: 1fr; }
+  .company-table th, .company-table td { display: block; width: 100%; }
+}
